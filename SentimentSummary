@@ -1,0 +1,76 @@
+# Import necessary libraries
+import requests
+from textblob import TextBlob
+from collections import Counter
+
+# Step 1: User Input
+def get_user_input():
+    """Allow users to input stock tickers as a comma-separated list."""
+    tickers = input("Enter stock tickers (comma-separated, e.g., AAPL, TSLA): ").strip()
+    return [ticker.strip().upper() for ticker in tickers.split(",")]
+
+# Step 2: Fetch News Headlines
+def fetch_news_headlines(ticker):
+    """Fetch recent news headlines for the given stock ticker."""
+    api_key = "fcda71eae5464edaa75e8b5839ac30cb"  # Replace with your News API key
+    url = f"https://newsapi.org/v2/everything?q={ticker}&apiKey={api_key}"
+    try:
+        response = requests.get(url)
+        data = response.json()
+        if data.get("status") == "ok":
+            headlines = [article["title"] for article in data["articles"][:10]]  # Limit to top 10
+            return headlines
+        else:
+            print(f"Error fetching news for {ticker}: {data.get('message', 'Unknown error')}")
+            return []
+    except Exception as e:
+        print(f"Error fetching news for {ticker}: {e}")
+        return []
+
+# Step 3: Sentiment Analysis
+def analyze_sentiment(headline):
+    """Classify sentiment of a headline as positive, neutral, or negative."""
+    analysis = TextBlob(headline)
+    if analysis.sentiment.polarity > 0:
+        return "Positive"
+    elif analysis.sentiment.polarity == 0:
+        return "Neutral"
+    else:
+        return "Negative"
+
+# Step 4: Aggregate Sentiment
+def aggregate_sentiment(sentiments):
+    """Calculate the percentage of positive, neutral, and negative headlines."""
+    counts = Counter(sentiments)
+    total = sum(counts.values())
+    percentages = {sentiment: (count / total) * 100 for sentiment, count in counts.items()}
+    overall_sentiment = max(percentages, key=percentages.get)
+    return percentages, overall_sentiment
+
+# Step 5: Display Insights
+def display_insights(ticker, headlines, sentiments, percentages, overall_sentiment):
+    """Display headlines, sentiment classifications, and aggregated sentiment."""
+    print(f"\n--- Sentiment Analysis for {ticker} ---")
+    for i, headline in enumerate(headlines):
+        print(f"{i + 1}. {headline} - {sentiments[i]}")
+    print("\nSentiment Distribution:")
+    for sentiment, percentage in percentages.items():
+        print(f"{sentiment}: {percentage:.2f}%")
+    print(f"Overall Sentiment: {overall_sentiment}")
+
+# Main Function
+def main():
+    tickers = get_user_input()
+    for ticker in tickers:
+        print(f"\nFetching news for {ticker}...")
+        headlines = fetch_news_headlines(ticker)
+        if not headlines:
+            print(f"No headlines found for {ticker}.")
+            continue
+
+        sentiments = [analyze_sentiment(headline) for headline in headlines]
+        percentages, overall_sentiment = aggregate_sentiment(sentiments)
+        display_insights(ticker, headlines, sentiments, percentages, overall_sentiment)
+
+if __name__ == "__main__":
+    main()
