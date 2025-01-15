@@ -105,7 +105,7 @@ def display_insights(ticker, headlines, sentiments, percentages, overall_sentime
     for sentiment, percentage in percentages.items():
         print(f"{sentiment}: {percentage:.2f}%")
     print(f"Overall Sentiment: {overall_sentiment}")
-    print(f"Price Change Over the Last Week: {price_change}")
+    print(f"Price Change Over the Last 2 days: {price_change}")
 
     # Generate and display recommendation
     recommendation = generate_recommendation(overall_sentiment, price_change)
