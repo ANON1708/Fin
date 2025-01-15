@@ -45,12 +45,6 @@ Helps users make informed investment decisions quickly.
      pip install requests textblob
      ```
 
----
-
-   ```
-
----
-
 ## Product Documentation
 
 ### Purpose
@@ -81,9 +75,6 @@ Sell: Negative sentiment detected.
 - **API Dependency**: Relies on NewsAPI for headlines.
 - **TextBlob**: Sentiment classification may not account for nuances.
 
----
-
----
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
