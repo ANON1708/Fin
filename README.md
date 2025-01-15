@@ -18,6 +18,8 @@ The **Stock Sentiment Analysis** tool allows users to analyze the sentiment of r
   - Provides an overall sentiment summary (e.g., "Mostly Positive").
 - **Actionable Insights**: Displays headline-level sentiment analysis along with distribution.
 
+## Improvements added
+
 ---
 
 ## Prerequisites
@@ -33,38 +35,6 @@ The **Stock Sentiment Analysis** tool allows users to analyze the sentiment of r
 
 ---
 
-## Setup and Usage
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/stock-sentiment-analysis.git
-   cd stock-sentiment-analysis
-   ```
-
-2. **Add Your API Key**:
-   - Open the `main.py` file.
-   - Replace `"your_news_api_key"` with your NewsAPI key.
-
-3. **Run the Program**:
-   ```bash
-   python main.py
-   ```
-
-4. **Input Stock Tickers**:
-   - When prompted, enter tickers (e.g., `AAPL, TSLA`).
-
-5. **Output Example**:
-   ```
-   Fetching news for AAPL...
-
-   --- Sentiment Analysis for AAPL ---
-   1. Apple announces new iPhone - Positive
-   2. Supply chain issues hit Apple - Negative
-
-   Sentiment Distribution:
-   Positive: 50.00%
-   Neutral: 0.00%
-   Negative: 50.00%
-   Overall Sentiment: Mixed
    ```
 
 ---
