@@ -20,6 +20,18 @@ The **Stock Sentiment Analysis** tool allows users to analyze the sentiment of r
 
 ## Improvements added
 
+- 1. **Stock Price Trend Analysis** 
+Fetches recent stock price data using the Alpha Vantage API.
+Calculates the percentage change in stock price over the last two trading days.
+Integrates price trend analysis into the insights provided for each stock.
+
+- 2. **Stock Recommendation System**
+Combines sentiment analysis and price trends to generate actionable recommendations:
+Buy: Positive sentiment with a recent price dip.
+Hold: Positive sentiment with stable or increasing price.
+Monitor: Neutral sentiment with no strong signals.
+Sell: Negative sentiment detected.
+Helps users make informed investment decisions quickly.
 ---
 
 ## Prerequisites
@@ -53,8 +65,15 @@ The tool helps investors gauge public sentiment around specific stocks using rec
 - **Sentiment Analysis**:
   - `TextBlob` calculates sentiment polarity:
     - Positive (>0), Neutral (0), Negative (<0).
+-Calculates price trend over last 2 days
+-Calculates recommendations such as:
+Buy: Positive sentiment with a recent price dip.
+Hold: Positive sentiment with stable or increasing price.
+Monitor: Neutral sentiment with no strong signals.
+Sell: Negative sentiment detected.
+
 - **API Integration**:
-  - Uses `requests` to fetch JSON data from NewsAPI.
+  - Uses `requests` to fetch JSON data from NewsAPI and Alpha Vantage
 - **Data Processing**:
   - Aggregates sentiment and calculates percentages using Python’s `Counter`.
 
@@ -63,16 +82,6 @@ The tool helps investors gauge public sentiment around specific stocks using rec
 - **TextBlob**: Sentiment classification may not account for nuances.
 
 ---
-
-## Future Enhancements
-1. **Real-Time Data**: Integrate Twitter API for real-time sentiment analysis.
-2. **Visualization**: Add graphs (e.g., pie charts) to display sentiment distribution.
-3. **Historical Analysis**: Analyze sentiment trends over time for better insights.
-
----
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
