@@ -34,6 +34,32 @@ Sell: Negative sentiment detected.
 Helps users make informed investment decisions quickly.
 ---
 
+## Sample Output
+
+-Enter stock tickers (comma-separated, e.g., AAPL, TSLA): NVDA
+
+Fetching news for NVDA...
+Fetching stock price trends for NVDA...
+
+--- Sentiment Analysis for NVDA ---
+1. Why Nvidia (NVDA) Is Retreating Today - Neutral
+2. Why Nvidia’s (NVDA) China Revenue Is Guaranteed Despite Restrictions - Neutral
+3. Analyst Predicts NVIDIA (NVDA) Stock Will Hit $800 By 2030 - Neutral
+4. Nvidia stock jumps 4% before CEO Jensen Huang's CES keynote - Neutral
+5. Analyst: NVIDIA (NVDA) Will Rally Again, Current Pullback Is a ‘Chance to Get In’ - Neutral
+6. Fresh job market data, Nvidia falls from record highs: Catalysts - Positive
+7. Micron (MU) Stock Jumps for Second Day After Nvidia (NVDA) Mention - Neutral
+8. Analyst on NVIDIA (NVDA): Investors Should Be ‘Very Vigilant’ Amid Rising Competition - Positive
+9. NVIDIA Corporation (NVDA) Under U.S. Commerce Department Investigation for AI Chip Smuggling to China - Neutral
+10. Stock market today: Dow ekes out gains, bitcoin slumps as 'Santa Claus' rally takes a pause - Neutral
+
+Sentiment Distribution:
+Neutral: 80.00%
+Positive: 20.00%
+Overall Sentiment: Neutral
+Price Change Over the Last 2 days: -1.10%
+Recommendation: Monitor - Neutral sentiment, no strong signals.
+
 ## Prerequisites
 1. **Python**:
    - Ensure Python 3.7 or above is installed on your system.
