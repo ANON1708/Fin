@@ -41,3 +41,14 @@ The **Stock Sentiment & Price Tracker** is a web-based tool that:
 - **Add historical trend analysis** for long-term sentiment tracking.  
 
 This tool provides **real-time insights** for stock traders, **bridging the gap** between financial news and decision-making. 🚀
+
+**Tool Screenshots**
+![image](https://github.com/user-attachments/assets/0dcd4f5a-fb3e-40da-b8a6-be01180d23bc)
+
+![image](https://github.com/user-attachments/assets/ba450cfe-2bb3-480b-8446-58f91278c379)
+
+![image](https://github.com/user-attachments/assets/63b6ffbf-b7f1-4814-8241-0fe4696b8c07)
+
+
+
+
