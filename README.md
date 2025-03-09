@@ -49,6 +49,9 @@ This tool provides **real-time insights** for stock traders, **bridging the gap*
 
 ![image](https://github.com/user-attachments/assets/63b6ffbf-b7f1-4814-8241-0fe4696b8c07)
 
+**Disclaimer**
+Personal project built for educational purposes only and does not provide financial advice. Use at your own risk. This isnt a licensed product. Please configure your own recommendation logic. 
+
 
 
 
