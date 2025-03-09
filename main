@@ -71,10 +71,10 @@ if st.button("Analyze"):
 
         # Recommendation
         if sentiment == "Positive":
-            st.success("✅ Recommendation: Buy or Hold")
+            st.success("✅ Recommendation: Consider speaking to an expert")
         elif sentiment == "Negative":
-            st.warning("⚠️ Recommendation: Consider Selling")
+            st.warning("⚠️ Recommendation: Consider speaking to an expert")
         else:
-            st.info("🔍 Recommendation: Monitor Trends")
+            st.info("🔍 Recommendation: Consider speaking to an expert")
     else:
         st.error("Please enter a valid stock ticker.")
